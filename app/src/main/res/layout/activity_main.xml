@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <Button
+        android:id="@+id/buttonCalculateMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Calcular troco"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAmountPaidCostumer"
+        app:layout_constraintStart_toStartOf="@+id/editTextAmountPaidCostumer"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAmountPaidCostumer" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="390dp"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/meu_troco_logo" />
+
+    <TextView
+        android:id="@+id/textViewBalanceCashRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Saldo em caixa: R$ 00,00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editTextTextPurchaseValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="00,00"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/textViewBalanceCashRegister"
+        app:layout_constraintStart_toStartOf="@+id/textViewBalanceCashRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Valor da Compra:"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPurchaseValue"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPurchaseValue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBalanceCashRegister" />
+
+    <EditText
+        android:id="@+id/editTextAmountPaidCostumer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="00,00"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPurchaseValue"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPurchaseValue"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Valor pago pelo cliente:"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAmountPaidCostumer"
+        app:layout_constraintStart_toStartOf="@+id/editTextAmountPaidCostumer"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPurchaseValue" />
+
+    <TextView
+        android:id="@+id/textViewDetailedBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailed_balance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDeposit"
+        app:layout_constraintStart_toStartOf="@+id/buttonDeposit"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDeposit" />
+
+    <Button
+        android:id="@+id/buttonDeposit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Depositar"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalculateMoney"
+        app:layout_constraintStart_toStartOf="@+id/buttonCalculateMoney"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCoinsCount" />
+
+    <TextView
+        android:id="@+id/textViewResultMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valor do troco: R$ 00,00"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalculateMoney"
+        app:layout_constraintStart_toStartOf="@+id/buttonCalculateMoney"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculateMoney" />
+
+    <TextView
+        android:id="@+id/textViewCoinsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResultMoney"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultMoney"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultMoney" />
+</androidx.constraintlayout.widget.ConstraintLayout>

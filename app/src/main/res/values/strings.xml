@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Meu Troco</string>
+    <string name="detailed_balance">clique aqui para <font color='#01C6DB'>saldo detalhado.</font></string>
+</resources>
